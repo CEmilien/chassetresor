@@ -5,6 +5,7 @@ import { AuthGuard } from './AuthGuard';
 
 import { UserEditPage } from './page/user/user-edit/user-edit';
 import { UserLoginComponent } from './page/user/user-login/user-login.component';
+import { QuestionComponent } from './page/questionnaire/question/question.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,6 +14,8 @@ const routes: Routes = [
   { path: 'user/login', component: UserLoginComponent},
   { path: 'user/create', component: UserEditPage},
   { path: 'user/edit/:id', component: UserEditPage, canActivate: [AuthGuard] },
+
+  { path: 'questionnaire/:questionnaireId/question/:questionId', component: QuestionComponent, canActivate: [AuthGuard] }
 
 ];
 

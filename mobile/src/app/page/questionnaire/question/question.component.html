@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+        <span slot="start" style="margin-left: 10px;"><img src="assets/imgs/logo.png" height="30" /></span>
+        <ion-title style="text-align: center;">Chagile</ion-title>
+        <ion-buttons slot="end">
+            <ion-menu-button autoHide="false" menu="main"></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ul *ngIf="questionnaire">
+        <li *ngFor="let q of questionnaire.questions">
+            <div>Question: {{q.intitule}}</div>
+            <div>Réponse: {{q.response}}</div>
+            <div>Lettre {{q.response.substr(q.lettreIdx,1)}}</div>
+        </li>
+    </ul>
+    <div *ngIf="question">
+        <div>Question: {{question.intitule}}</div>
+        <div>Réponse: {{question.response}}</div>
+        <div>Lettre {{question.response.substr(question.lettreIdx,1)}}</div>
+    </div>
+</ion-content>

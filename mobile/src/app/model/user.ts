@@ -13,3 +13,5 @@ export interface User extends PersistentData {
     authProvider?: AuthProvider;
     accountStatus: AccountStatus;
 }
+
+

@@ -24,9 +24,12 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { environment } from '../environments/environment';
 import { UserService } from './service/UserService';
+import { QuestionComponent } from './page/questionnaire/question/question.component';
+import { QuestionnaireService } from './service/QuestionnaireService';
 
 @NgModule({
   declarations: [AppComponent,
+    QuestionComponent,
     UserLoginComponent,
     UserEditPage],
   entryComponents: [],
@@ -49,6 +52,7 @@ import { UserService } from './service/UserService';
     SplashScreen,
     AppSettingsService,
     ConnectedUserService,
+    QuestionnaireService,
     UserService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
